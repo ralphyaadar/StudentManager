@@ -14,7 +14,6 @@
 
   <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="DAL\Repositories\" />
     <Folder Include="Models\" />
     <Folder Include="Migrations\" />
   </ItemGroup>

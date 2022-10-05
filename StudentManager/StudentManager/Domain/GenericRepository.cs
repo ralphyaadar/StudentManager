@@ -1,6 +1,6 @@
 ﻿using StudentManager.Models;
 
-namespace StudentManager.DAL;
+namespace StudentManager.Domain;
 
 /// <summary>
 /// DAL repository

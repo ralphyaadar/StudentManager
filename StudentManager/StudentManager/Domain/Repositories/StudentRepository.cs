@@ -1,6 +1,6 @@
 ﻿using StudentManager.Models;
 
-namespace StudentManager.DAL.Repositories;
+namespace StudentManager.Domain.Repositories;
 
 public class StudentRepository : GenericRepository<Student>, IStudentRepository
 {
