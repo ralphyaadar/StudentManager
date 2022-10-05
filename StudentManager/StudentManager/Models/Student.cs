@@ -3,6 +3,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace StudentManager.Models;
 
+/// <summary>
+/// Student model class
+/// </summary>
 [Table("Student")]
 public class Student
 {
