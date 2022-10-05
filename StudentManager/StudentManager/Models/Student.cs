@@ -16,7 +16,4 @@ public class Student
     public string LastName { get; set; }
 
     public int Age { get; set; }
-
-    [ForeignKey("StudentId")]
-    public virtual ICollection<Subject> Subjects { get; set; }
 }
