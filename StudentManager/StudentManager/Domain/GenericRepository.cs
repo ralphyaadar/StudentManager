@@ -38,6 +38,13 @@ public class GenericRepository<T> : IGenericRepository<T> where T : class
 
         _context.SaveChanges();
     }
+
+    public void Remove(int id)
+    {
+        var entity = GetById(id);
+
+        Remove(entity);
+    }
 }
 
 public interface IGenericRepository<T> where T : class
@@ -49,4 +56,6 @@ public interface IGenericRepository<T> where T : class
     void Add(T entity);
 
     void Remove(T entity);
+
+    void Remove(int id);
 }

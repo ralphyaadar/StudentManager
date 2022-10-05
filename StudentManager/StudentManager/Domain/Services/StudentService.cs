@@ -21,9 +21,14 @@ public class StudentService : IStudentService
         return _repository.GetById(id);
     }
 
-    public void DeleteStudent(Student student)
+    public void DeleteStudent(int id)
     {
-        _repository.Remove(student);
+        _repository.Remove(id);
+    }
+
+    public void AddStudent(Student student)
+    {
+        _repository.Add(student);
     }
 }
 
@@ -33,5 +38,7 @@ public interface IStudentService
 
     Student GetStudent(int id);
 
-    void DeleteStudent(Student student);
+    void DeleteStudent(int id);
+
+    void AddStudent(Student student);
 }
