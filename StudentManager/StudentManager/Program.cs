@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using StudentManager.Domain;
 using StudentManager.Domain.Repositories;
+using StudentManager.Domain.Services;
 using StudentManager.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddTransient<IStudentRepository, StudentRepository>();
+builder.Services.AddTransient<IStudentService, StudentService>();
 
 builder.Services.AddDbContext<StudentDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
