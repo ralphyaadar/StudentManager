@@ -28,11 +28,15 @@ public class GenericRepository<T> : IGenericRepository<T> where T : class
     public void Add(T entity)
     {
         _context.Set<T>().Add(entity);
+
+        _context.SaveChanges();
     }
 
     public void Remove(T entity)
     {
         _context.Set<T>().Remove(entity);
+
+        _context.SaveChanges();
     }
 }
 
